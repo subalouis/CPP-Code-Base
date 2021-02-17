@@ -1,8 +1,24 @@
+/*                                      
+Movie Resevation System
+BSCS 2A
+--------------------------
+Suba, Louis Andrei L. 
+Pangilinan, Jerico
+Gaspar, Mark Jimwell
+Sumandal III, Fernando
+Intal, Ferwinkle
+
+Table of Contents
+Linked List - Line
+Linked List Stacks
+Linked List Queue
+git repo at: https://github.com/subalouis/CPP-Code-Base
+*/
+
 #include <iostream>
-#include <stack>
-#include <time.h> //time decalarion
+#include <time.h>   //time decalarion
 #include <conio.h>
-#include <iomanip>
+
 
 int refNum = 343248;
 int ticketNum = 241234;
@@ -10,7 +26,7 @@ std :: string movieList[5] = {"Cinema 1 - The Rain ", "Cinema 2 - Parasite", "Ci
 
 double moviePrices[5] = {350,420,690,777,666};
 
-time_t timeToday = time(NULL);            //time generator
+time_t timeToday = time(NULL);             //time generator
 int referencenumber = 2000;                //reference number generator
     //reservation();
 
@@ -19,7 +35,7 @@ struct stackLinkedList{
     int referencenumber;
     std :: string modePayment;
     std :: string movieName;
-    stackLinkedList *next; 
+    stackLinkedList *next;
 };
 
 struct linkedList{
@@ -108,7 +124,7 @@ class queuefunction{
             newNode -> next = NULL;
 
             if(isReservationEmpty()){
-                std :: cout << "its in\n\n";
+                std :: cout << "Data is in\n\n";
                 reserveHead = newNode;
                 reserveTail = newNode;
             } 
@@ -127,7 +143,7 @@ class queuefunction{
             }
 
             else{
-                std :: cout << "Referrence Number\tMovie Name-Cinema#\t Seat Number\n";
+                std :: cout << "Reference Number\tMovie Name-Cinema#\t Seat Number\n";
                 while(temp != NULL){
                     std :: cout << temp -> referencenumber << "\t\t\t" << temp -> movieName << "\t" << temp -> seatNum << "\n\n";
                     temp = temp -> next;
